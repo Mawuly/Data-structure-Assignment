@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ArrayGrade — Student Marks & Grade Calculator</title>
+<link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:,">
+</head>
+<body>
+<header class="top"><div class="topin"><div class="brand"><span>A</span>ArrayGrade</div></div></header>
+<main>
+<div class="head"><div><div class="eyebrow">Student results manager</div><h1>Marks &amp; Grade Calculator</h1><p>Enter students' marks, calculate averages, and view grades. This demo uses JavaScript arrays to store and process records.</p></div><button class="sample" id="sample">↻ Load sample data</button></div>
+<section class="stats"><div class="stat"><small>Students recorded</small><div class="num" id="count">0</div><small>Total class records</small></div><div class="stat"><small>Class average</small><div class="num" id="classAvg">—</div><small>Average of student averages</small></div><div class="stat"><small>Top performer</small><div class="num" style="font-size:20px" id="topName">—</div><small id="topAvg">Add marks to begin</small></div></section>
+<div class="layout">
+<section class="panel"><div class="panelhead"><h2>Add a student</h2><p>Enter a name and three subject marks (0–100).</p></div><div class="panelbody"><div id="msg" class="msg" role="alert"></div>
+<form id="form"><label>Student name<input id="name" maxlength="60" placeholder="e.g. Ama Mensah" required></label><label>Subject marks<div class="marks"><input id="m1" type="number" min="0" max="100" placeholder="Maths" required><input id="m2" type="number" min="0" max="100" placeholder="English" required><input id="m3" type="number" min="0" max="100" placeholder="Science" required></div></label><button class="primary" type="submit">＋ Add student</button></form><p class="note">Each student's marks are stored in an array. Average and grade are calculated automatically.</p></div></section>
+<section class="panel"><div class="toolbar"><strong>Class results <span id="shown">(0)</span></strong><input id="search" type="search" placeholder="Search students…" aria-label="Search students"><button id="export" class="export">↓ Export CSV</button></div><div class="tablewrap"><table><thead><tr><th>Student</th><th>Maths</th><th>English</th><th>Science</th><th>Average</th><th>Grade</th><th>Action</th></tr></thead><tbody id="rows"></tbody></table><div class="empty" id="empty"><b>No student records yet</b>Add a student or load sample data.</div></div><div class="foot" id="summary">Ready for your first record · Grades: A ≥ 80, B ≥ 70, C ≥ 60, D ≥ 50, F &lt; 50</div></section>
+</div>
+<section class="concept"><h3>💡 How arrays power this application</h3><p>The <span class="code">students</span> array stores records. <span class="code">students.push()</span> adds a record, <span class="code">filter()</span> searches or removes records, and <span class="code">reduce()</span> calculates averages. Arrays keep related records together for processing, display, and export.</p></section>
+<p class="note" style="text-align:center;margin-top:22px">Data Structures assignment demonstration · HTML, CSS and JavaScript · Data is saved in this browser</p>
+</main><div class="toast" id="toast"></div>
+<script src="script.js" defer></script>
+</body></html>
